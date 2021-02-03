@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+:root {
+  --blue: #0984e3;
+  --purple: #a29bfe;
+  --pink-light: #ff7675;
+  --red: #d63031;
+  --green-light: #00cec9;
+  --grad-blue: linear-gradient(45deg, #1fe6ff, #673ab7);
+  --grad-red: linear-gradient(45deg, #ff7675, #d63031);
+  --grad-yellow: linear-gradient(45deg, #81773d, #f0c580);
+  --grad-purple: linear-gradient(45deg, #a816fd, #a796c5);
+  --grad-green: linear-gradient(45deg, #6adf66, #3afa0a);
+
+  --opacity-skills: 0.1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2e2e2e;
+}
+.container {
+  position: relative;
+  width: 500px;
+}
+.container h2 {
+  color: #fff;
+  text-align: center;
+}
+.container .skills {
+  position: relative;
+  display: flex;
+  margin: 20px 0;
+  padding: 24px 10px 18px;
+  background: linear-gradient(#616161 0%, #333 10%, #222);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #000;
+  transition: 0.5s;
+}
+
+.container:hover .skills {
+  opacity: var(--opacity-skills);
+}
+.container .skills:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.container .skills:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+.container .skills .Name {
+  position: relative;
+  width: 110px;
+  text-align: center;
+  color: #fff;
+  margin-top: -2px;
+  text-transform: uppercase;
+}
+
+.container .skills .Value {
+  position: relative;
+  width: 40px;
+  text-align: left;
+  color: #fff;
+  margin-top: -2px;
+  text-transform: uppercase;
+}
+.container .skills .percent {
+  position: relative;
+  width: calc(100% - 150px);
+  height: 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+  background: #151515;
+  box-shadow: inset 0 0 10px #000;
+  overflow: hidden;
+}
+
+.container .skills .percent .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: inset 0 0 2px #000;
+  animation: animateBar 4s ease-in-out forwards;
+}
+@keyframes animateBar {
+  from {
+    width: 0;
+  }
+}
+
+.container.skills: .percent .progress;
+.skills;
